@@ -2,7 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+let nombreCreador = 'César Torres García';
+let mensaje = 'esta suave'
+
+function App(props: { descripcion: string, creador: string  }) {
   return (
     <div className="App">
       <header className="App-header">
@@ -16,7 +19,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Aprende react {nombreCreador}<br></br>
+          {mensaje}<br></br>
+          {props.descripcion}<br></br>
+          {props.creador}
         </a>
       </header>
     </div>
