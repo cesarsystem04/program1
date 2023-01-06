@@ -1,11 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { TodoCounter } from './TodoCounter'
+import { TodoSearch } from './TodoSearch'
+import { TodoList } from './TodoList';
+import { TodoItem } from './TodoItem';
 
 let nombreCreador = 'César Torres García';
 let mensaje = 'esta suave'
 
-function App(props: { descripcion: string, creador: string  }) {
+function App2() {
   return (
     <div className="App">
       <header className="App-header">
@@ -21,12 +25,40 @@ function App(props: { descripcion: string, creador: string  }) {
         >
           Aprende react {nombreCreador}<br></br>
           {mensaje}<br></br>
-          {props.descripcion}<br></br>
-          {props.creador}
         </a>
       </header>
     </div>
   );
 }
+
+
+const todos = [
+  { text: 'Cortar cebolla', completed: false },
+  { text: 'Tomar curso de introduccióñ', completed: false },
+  { text: 'Cortar cebolla 2', completed: false }
+];
+
+function App() {
+
+  return (
+    <React.Fragment>
+      <TodoCounter />
+      <TodoSearch />
+
+      <TodoList >
+
+        {todos.map(todo => (
+          <TodoItem text={todo.text} completed={todo.completed} />
+        ))}
+
+      </TodoList>
+      {/*<CreateTodoButton /> */}
+      <button>+</button>
+    </React.Fragment>
+  );
+
+}
+
+
 
 export default App;
