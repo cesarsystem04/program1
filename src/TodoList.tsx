@@ -1,4 +1,6 @@
 import React from "react";
+import './TodoList.css';
+
 
 type Props = {
     children: string | JSX.Element | JSX.Element[]
@@ -7,7 +9,7 @@ type Props = {
 function TodoList({ children }: Props) {
     return (
         <section>
-            <p>{children}</p>
+            <ul>{children}</ul>
         </section>);
 }
 

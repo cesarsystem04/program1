@@ -1,6 +1,7 @@
 import React from "react";
+import './TodoCounter.css';
 
-const estilos ={
+const estilos = {
     color: 'red',
     backgroundColor: 'yellow',
 }
@@ -8,7 +9,7 @@ const estilos ={
 
 function TodoCounter() {
     return (
-        <h2 style={estilos}>has completado 2 de 3 TODOS</h2>
+        <h2 className="TodoCounter">has completado 2 de 3 TODOS</h2>
     );
 }
 
