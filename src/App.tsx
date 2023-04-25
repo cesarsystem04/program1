@@ -8,8 +8,7 @@ import { TodoItem } from './TodoItem';
 import { CreateTodoButton } from './CreateTodoButton';
 
 let nombreCreador = 'César Torres García';
-let mensaje = 'esta suave'
-
+let mensaje = 'esta suave';
 
 
 
@@ -27,7 +26,6 @@ function App() {
       <TodoSearch />
 
       <TodoList >
-
         {todos.map(todo => (
           <TodoItem key={todo.text}
             text={todo.text}

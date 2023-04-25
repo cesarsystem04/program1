@@ -9,7 +9,7 @@ const estilos = {
 
 function TodoCounter() {
     return (
-        <h2 className="TodoCounter">has completado 2 de 3 TODOS</h2>
+        <h2 className="TodoCounter">Has completado 2 de 3 TODOS</h2>
     );
 }
 
